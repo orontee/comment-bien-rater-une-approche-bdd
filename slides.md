@@ -2,7 +2,7 @@
 title: Comment bien rater une approche BDD
 titleTemplate: '%s - Sud-ouest Days'
 layout: cover
-background: '/20230225_0023.jpg'
+background: '20230225_0023.jpg'
 download: true
 ---
 
@@ -35,11 +35,11 @@ Suites logiques
 
 2 3 5 7 11 13 17 19 23 29 31 37 41 43 **47**
 
-<!-- La suite des nombres premiers, point de vue du commercial, du PO
-et du développeur -->
-
 <div v-click>Observation : on peut essayer de s'appuyer sur des
 <b>exemples concrets</b> pour formaliser un comportement</div>
+
+<!-- La suite des nombres premiers, point de vue du commercial, du PO
+et du développeur -->
 
 ---
 
@@ -48,7 +48,8 @@ Behavior Driven Development
 
 Introducing BDD, <b>Dan North</b>, <i>Better Software Magazine Article</i>, 2006
 
-<div v-click>Un <b>language polyvalent</b> doit permettre de :</div>
+<div v-click>En s'appuyant sur des <b>exemples concrets</b>, un
+<b>language polyvalent</b> doit permettre de :</div>
 
 <v-clicks>
 
