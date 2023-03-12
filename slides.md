@@ -2,7 +2,7 @@
 title: Comment bien rater une approche BDD
 titleTemplate: '%s - Sud-ouest Days'
 layout: cover
-background: 'public/20230225_0023.jpg'
+background: '/20230225_0023.jpg'
 download: true
 ---
 
@@ -227,6 +227,8 @@ Et le JSON reçu est une liste qui contient un élément avec l'identifiant "36"
 ```
 
 </div>
+
+<!-- Regarder du côté de RSpec -->
 
 <v-clicks at="2">
 

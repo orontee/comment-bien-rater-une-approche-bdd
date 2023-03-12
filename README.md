@@ -42,7 +42,6 @@ Les diapositives sont générées avec l'outil [slidev](https://sli.dev/)
 ; les sources se trouvent dans le fichier [slides.md](./slides.md).
 
 Pour les modifier :
-
 ```
 nvm use
 npm install
@@ -50,7 +49,7 @@ npm run dev
 ```
 
 Pour générer une version statique dans le répertoire `dist` :
-
 ```
 npm run build
 ```
+Les diapos sont publiées sur https://orontee.github.io/comment-bien-rater-une-approche-bdd/.
