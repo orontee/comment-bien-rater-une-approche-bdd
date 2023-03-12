@@ -2,13 +2,14 @@
 title: Comment bien rater une approche BDD
 titleTemplate: '%s - Sud-ouest Days'
 layout: cover
-background: './public/20230225_0023.jpg'
+background: 'public/20230225_0023.jpg'
+download: true
 ---
 
 # Comment bien rater une approche
 #  *Behavior Driven Development*
 
-Sud-ouest Days - 17 mars 2023
+Matthias Meulien - Sud-ouest Days - 17 mars 2023
 
 ---
 

@@ -1,8 +1,8 @@
 {
   "scripts": {
     "dev": "slidev",
-    "build": "slidev build --base comment-bien-rater-une-approche-bdd/",
-    "export": "slidev export --out comment-bien-rater-une-approche-bdd.pdf"
+    "build": "slidev build --base /comment-bien-rater-une-approche-bdd",
+    "export": "slidev export --with-clicks --output comment-bien-rater-une-approche-bdd.pdf"
   },
   "dependencies": {
     "@slidev/cli": "^0.40.3",
