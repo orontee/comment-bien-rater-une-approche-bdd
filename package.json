@@ -5,7 +5,7 @@
     "export": "slidev export --with-clicks --output comment-bien-rater-une-approche-bdd.pdf"
   },
   "dependencies": {
-    "@slidev/cli": "^0.40.3",
+    "@slidev/cli": "^0.46.0",
     "@slidev/theme-default": "^0.21.2"
   },
   "devDependencies": {
