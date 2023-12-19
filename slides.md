@@ -586,11 +586,19 @@ Fonctionnalité: Recherche de vélo par marque
 
 - Bouchonner plutôt que peupler une base de données
 
-<div><mdi-hand-pointing-right class="text-red-400"/> <b>Fragile !</b></div>
+<div><mdi-hand-pointing-right class="text-red-400"/> <b>Fragile ! Et couplage entre instanciation des étapes et bouchons : impossible de réutiliser les étapes</b></div>
 
 </div>
 
 </v-clicks>
+
+<!--
+
+Car les bouchons sont généralement spécifiques à des paramètres
+précis, donc sont fortement couplés à une instanciation des étapes : on
+perd la réutilisabilité
+
+-->
 
 ---
 
@@ -615,9 +623,13 @@ def step(ctx: Context, brand: str) -> None:
     ctx.resp = ctx.http_client.get(url, params={"brand": brand})
 ```
 
-<div><mdi-hand-pointing-right class="text-red-400"/> <b>Fragile !</b></div>
-
 <v-clicks at="1">
+
+<div><mdi-hand-pointing-right class="text-red-400"/> <b>Fragile ! Pas réutilisable…</b></div>
+
+</v-clicks>
+
+<v-clicks at="2">
 
 <div style="margin-top: 1em;">
 
@@ -628,6 +640,42 @@ def step(ctx: Context, brand: str) -> None:
 </div>
 
 </v-clicks>
+
+---
+
+# Ecueils à éviter
+
+- S'imposer un framework BDD quand on ne veut pas faire plus que :
+
+```sh
+nvm install --lts
+npm install --save-dev jest axios
+```
+
+```javascript
+const axios = require('axios');
+
+it('is possible to search bikes by brand', async () => {
+  const response = await axios.get({url: '/bikes/find-by-brand?brand=LaBicycletteParfaite'});
+
+  expect(response.status).toBe(200);
+  expect(response.data).toBe(Array);
+});
+```
+
+
+<v-clicks at="1">
+
+<div><mdi-hand-pointing-right class="text-red-400"/> <b>L'approche BDD est plus coûteuse !</b></div>
+
+<h3 style="margin-top: 2em; text-align: center;">L'approche BDD prend
+tout son sens avec des systèmes complexes, à états. Un unique service
+<i>stateless</i> n'est probablement pas la bonne cible.</h3>
+
+</v-clicks>
+
+<!-- Dans le cas d'un service stateless, les étapes deviennent des
+paraphrases de l'API ou de la mise en place du contexte. -->
 
 ---
 
