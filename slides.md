@@ -170,8 +170,9 @@ Quadriciels
 
 - [RSpec](https://rspec.info/)
 
-  Orientée Ruby, bibliothèque historique, implémentation des critères
-  d'acceptation concomittante avec leur description
+  Orientée Ruby, bibliothèque historique, n'utilise pas Gherkin,
+  implémentation des critères d'acceptation concomittante avec leur
+  description
 
 </v-clicks>
 
@@ -325,7 +326,12 @@ Fonctionnalité: Recherche de vélo par marque
 # Retour sur Mise en œuvre & outillage
 Quadriciels
 
-[RSpec est documenté (mais pas testé) en Gherkin !](https://github.com/rspec/rspec-core/blob/main/features/)
+[RSpec est documenté en Gherkin, les exemples de la doc sont
+exécutables
+!](https://github.com/rspec/rspec-core/blob/main/features/)
+
+[Documentation correspondant au Gherkin
+suivant](https://rspec.info/features/3-12/rspec-core/command-line/randomization/)
 
 <div style="overflow-y: scroll; display: inline-block; height: 75%;">
 
