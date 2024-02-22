@@ -171,7 +171,7 @@ Quadriciels
 - [RSpec](https://rspec.info/)
 
   Orientée Ruby, bibliothèque historique, n'utilise pas Gherkin,
-  implémentation des critères d'acceptation concomittante avec leur
+  implémentation des critères d'acceptation concomitants avec leur
   description
 
 </v-clicks>
@@ -604,7 +604,7 @@ perd la réutilisabilité
 
 # Ecueils à éviter
 
-- Mélanger les responsabilité des étapes
+- Mélanger les responsabilités des étapes
 
 ```python
 @given("qu'un vélo de marque {brand} est en stock")
