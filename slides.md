@@ -227,7 +227,7 @@ Fonctionnalité: Recherche de vélo par marque
 # Bike store
 Exemple d'automatisation des critères d'acceptation
 
-```gherkin {1|1,2|1,3|1,4||all}
+```gherkin {1|1,2|1,3|1,4|all}
   Scénario: Cas d'une marque en stock
     Étant donné qu'un vélo de marque "Motobécane" est en stock
     Quand un utilisateur recherche les vélos de marque "Motobécane"
@@ -546,7 +546,8 @@ Fonctionnalité: Recherche de vélo par marque
 
 <div style="margin-top: 1em;">
 
-- Écrire des Gherkin <b>et</b> des critères d'acceptation
+- Écrire à la fois des Gherkin pour tester <b>et</b> des critères
+  d'acceptation dans un autre formalisme
 
 <div><mdi-hand-pointing-right class="text-red-400"/> <b>Travail en double ?</b></div>
 
