@@ -223,41 +223,38 @@ Fonctionnalité: Recherche de vélo par marque
 ```
 
 ---
+clicks: 4
+---
 
 # Bike store
 Exemple d'automatisation des critères d'acceptation
 
-```gherkin {1|1,2|1,3|1,4|all}
+```gherkin {none|1|1,2|1,3|1,4|all}
   Scénario: Cas d'une marque en stock
     Étant donné qu'un vélo de marque "Motobécane" est en stock
     Quand un utilisateur recherche les vélos de marque "Motobécane"
     Alors la liste récupérée devrait "contenir le vélo"
 ```
 
-<v-clicks at="1">
-<div>
+<v-click at="1">
 ```python
 @given("qu'un vélo de marque {brand} est en stock")
 def step(ctx: Context, brand: str) -> None:
     bike_desc = ctx.docs[brand]
     ctx.current_bike_doc = ctx.db_client.replace_one(bike_desc, upsert=True)
 ```
-</div>
-</v-clicks>
+</v-click>
 
-<v-clicks at="2">
-<div>
+<v-click at="2">
 ```python
 @when("un utilisateur recherche les vélos de marque {brand}")
 def step(ctx: Context, brand: str) -> None:
     url = "/bikes/find-by-brand"
     ctx.resp = ctx.http_client.get(url, params={"brand": brand})
 ```
-</div>
-</v-clicks>
+</v-click>
 
-<v-clicks at="3">
-<div>
+<v-click at="3">
 ```python
 @then("la liste récupérée devrait {expected_state}")
 def step(ctx: Context, expected_state: str) -> None:
@@ -267,8 +264,7 @@ def step(ctx: Context, expected_state: str) -> None:
     elif expected_state == "contenir le vélo":
         assert("current_bike_doc" in ctx and ctx.current_bike_doc.id in [d.id for d in ctx.resp.data])
 ```
-</div>
-</v-clicks>
+</v-click>
 
 <!-- 
 
