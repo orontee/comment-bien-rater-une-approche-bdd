@@ -2,7 +2,7 @@
 title: Comment bien rater une approche BDD
 titleTemplate: '%s - Sud-ouest Days'
 layout: cover
-background: 20230225_0023.jpg
+background: 20230225_0023.webp
 download: true
 highlighter: shiki
 ---
